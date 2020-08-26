@@ -1,0 +1,36 @@
+header
+{
+    background-color: rgb(255, 123, 255);
+    color: darkmagenta;
+    padding: 2em;
+}
+
+header div
+{
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header div div
+{
+    width: 50%;
+}
+
+header div div:first-child div
+{
+    padding-left: 5em;
+}
+
+header div div:last-child
+{
+    margin-left: auto;
+}
+
+header a
+{
+    text-decoration: none;
+    padding: 0.6em;
+    background-color: rgb(78, 6, 78);
+    color: pink;
+}
