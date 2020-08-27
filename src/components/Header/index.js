@@ -3,17 +3,17 @@ import { Link, withRouter } from "react-router-dom";
 import axios from 'axios'
 
 const Header = (props) => {
-    const sayHi = 'Hi'
-    const name = 'Artists'
+    const sayHi = 'Bienvenido al reflejo azul, ';
+    const name = 'Summer Pockets';
 
-    const [categories, setCategories] = useState([])
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('https://artists-api.vercel.app/artists');
-                const data = response.data
-                const cats = data.map(category => category.genre)
+                const data = response.data;
+                const cats = data.map(category => category.genre);
 
                 //Crea un nuevo array sin data repetida
                 const catsUnrepeated = new Set(cats);
@@ -28,21 +28,21 @@ const Header = (props) => {
     }, [])
 
     const handleCategorySelect = (event)=>{
-        props.history.push(`/category/${event.target.value}`)
+        props.history.push(`/category/${event.target.value}`);
     }
 
     return (
         <header className="App-header">
             <div>{`${sayHi} ${name}!`}</div>
             <div>
-                <Link to="/">Home</Link>
                 <select name="cat"
                 onChange={handleCategorySelect}
                 >
-                    {categories.map(category => <option key={category} value={category}>{category}</option>)}
+                     {categories.map(category => <option key={category} value={category}>{category}</option>)}
                 </select>
+                <Link to="/">Home</Link>
             </div>
         </header>
     )
 }
-export default withRouter(Header)
+export default withRouter(Header);

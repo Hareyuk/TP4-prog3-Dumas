@@ -1,0 +1,16 @@
+.hover
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.9);
+    position: absolute;
+    mix-blend-mode: luminosity;
+    transition: 1s ease-in;
+}
+
+.hover-anim
+{
+    transform: scale(1.2) translate(-50%,-50%);
+    opacity: 0;
+
+}

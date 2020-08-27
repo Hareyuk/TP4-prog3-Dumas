@@ -28,11 +28,17 @@ const MainArtist = ()=>
 
     return (
         <div className="main">
-            <h1>Listado de artistas</h1>
-            <h2>{artist.name}</h2>
-            <img src={artist.avatar} alt={artist.name} />
-            <p>{artist.genre}</p>
-            <Link to="/">Volver</Link>
+            <h1>El elegido para enfrentarse al monstruo de las notas sinfónicas</h1>
+            <div className="contentAll">
+                <div className="divStar-yellow"></div>
+                <div className="divStar-pink"></div>
+                <div className="cardMain">
+                    <h2>{artist.name}</h2>
+                    <img src={artist.avatar} alt={artist.name} />
+                    <p>{artist.genre}</p>
+                    <Link to="/">Volver</Link>
+                </div>
+            </div>
         </div>
     );
 }

@@ -27,10 +27,11 @@ header div div:last-child
     margin-left: auto;
 }
 
-header a
+header a 
 {
     text-decoration: none;
     padding: 0.6em;
     background-color: rgb(78, 6, 78);
     color: pink;
 }
+

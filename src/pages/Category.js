@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import { useParams } from "react-router-dom";
-import Layout from '../containers/Layout';
-import MainCategory from '../components/MainCategory';
+import Layout from '../containers/Layout'
+import MainCategory from '../components/MainCategory'
 
 const Category = () => {
     const { catId } = useParams();

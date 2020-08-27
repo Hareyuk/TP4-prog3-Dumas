@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Switch>
-          <Route  path="/category/:id">
+          <Route path="/category/:catId">
             <Category />
           </Route>
           <Route  path="/artist/:id">

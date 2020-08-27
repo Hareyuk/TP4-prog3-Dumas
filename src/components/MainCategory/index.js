@@ -2,8 +2,10 @@ import React, {useState, useEffect} from 'react';
 import Card from '../Card';
 import axios from 'axios';
 
-const MainCategory = ({catId})=>
+const MainCategory = (props)=>
 {
+    const {catId} = props;
+    console.log(`Estoy en una category, ${catId}`)
     //Para guardar toda la ifnormacion de la interfaz y hcaer funciones para setear la info
     const [artists, setArtists] = useState([]);
     //Si esta vacio el array, el efecto se ejecutara cuando se levante el componente una sola vez
@@ -32,7 +34,7 @@ const MainCategory = ({catId})=>
     return(
         <div className="main">
         <h1>Artistas de {catId}</h1>
-            {artists !== [] && artists.map(artist => <Card key={artist._id} data={artist} />)}
+            {artists.map(artist => <Card key={artist._id} data={artist}/>)}
         </div>
     )
 }
